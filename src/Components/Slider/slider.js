@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const useSlider = (
+const Slider = (
   dataLength,
   desktopCount = 3,
   tabletCount = 2,
@@ -24,7 +24,7 @@ const useSlider = (
     // Reset to prevent overflow
     setCardsPerSlide((prevCount) => {
       if (prevCount !== newCount) {
-        setStartIndex(0); // إعادة ضبط الفهرس عند تغيير العدد
+        setStartIndex(0); 
       }
       return newCount;
     });
