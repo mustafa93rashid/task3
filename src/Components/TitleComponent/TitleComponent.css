@@ -1,0 +1,92 @@
+/* Main Title Section Styling */
+.MR-titleSection {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 19px;
+    margin-top: 200px;
+    margin-bottom: 100px;
+
+    /* Styling for the <span> element (small button-like text) */
+    span {
+        width: fit-content;
+        background-color: var(--white-color);
+        border: 2px solid var(--black-color);
+        border-radius: 8px;
+        padding: 10px 20px;
+        color: var(--grey20);
+    }
+
+    span:hover {
+        background-color: var(--Orange80); /* Green */
+        transition-duration: 0.4s ;
+      }
+
+    /* Styling for the <h3> element (main heading) */
+    .Mr-Title {
+        color: var(--grey10);
+        font-family: "Raleway", sans-serif;
+    }
+
+    /* Styling for the <p> element (description) */
+    .Mr-pargraph{
+        color: var(--grey20);
+        width: 62.3115578%;
+    }
+
+    .Mr-Title,
+    .Mr-pargraph {
+        text-align: center;
+    }
+}
+
+
+
+/* Utility class to remove the top margin in Our Benefits*/
+.mt_0 {
+    margin-top: 0 !important;
+  }
+
+
+/* ---------- Responsive for screen <= 1919px ---------- */
+@media (max-width: 1919px) {
+    .MR-titleSection {
+        gap: 14px;
+        margin-top: 150px;
+        margin-bottom: 80px;
+
+        span {
+            font-size: 16px;
+            border-radius: 6px;
+            padding: 8px 14px;
+        }
+
+        .Mr-Title {
+            font-size: 48px;
+        }
+
+        .Mr-pargraph {
+            font-size: 16px;
+        }
+
+    }
+}
+
+/* ---------- Responsive for screen <= 992px (mobile view) ---------- */
+@media (max-width: 992px) {
+    .MR-titleSection {
+        gap: 10px;
+        margin-top: 80px;
+        margin-bottom: 50px;
+    }
+    
+    .Mr-Title{
+        font-size: 38px !important;
+    } 
+
+    .Mr-pargraph {
+        width: 100% !important;
+    }
+
+}

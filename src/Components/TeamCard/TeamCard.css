@@ -1,0 +1,166 @@
+/* === Card Container for Team Member === */
+.MR-teamCard {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 48.433584%;
+    align-items: start;
+    gap: 30px;
+    border-radius: 12px;
+    background-color: var(--white-color);
+    box-shadow: 6px 6px 0px 2px #1E1E1E;
+    border: 1.5px solid var(--grey15);
+}
+
+/* === Header of the Team Card === */
+.MR-teamCardHeader {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* === Info Section: Image + Name === */
+.MR-teamInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+/* === Team Member Name Styling === */
+.MR-teamInfo h4 {
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
+}
+
+/* === Team Member Image Container === */
+.MR-teamImage {
+    border: 1.5px solid var(--grey15);
+    background-color: var(--Orange97);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+}
+
+/* === Team Member Image === */
+.MR-teamImage img {
+    width: 200%;
+}
+
+/* === Icon Box for Interaction or Decoration === */
+.MR-teamIcon {
+    padding: 16px;
+    border-radius: 8px;
+    background-color: var(--Orange90);
+    border: 1.5px solid var(--grey15);
+    width: 56px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* === Body Section of the Card (e.g. Bio) === */
+.MR-teamCardBody {
+    background-color: var(--Orange97);
+    padding: 30px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 1.5px solid var(--grey15);
+}
+
+/* === Color Styling for Text inside Card === */
+.MR-teamCard .MR-teamInfo h4,
+.MR-teamCard p {
+    color: var(--grey20);
+}
+
+
+.MR-teamCard:hover {
+    transform: translateY(-8px); 
+    box-shadow: 8px 8px 0px 2px #1E1E1E; 
+    border-color: var(--orange65); 
+}
+
+
+/* ---------- Responsive for screen <= 1919px ---------- */
+@media (max-width: 1919px) {
+    .MR-teamCard {
+        border-radius: 10px;
+        gap: 24px;
+        padding: 40px;
+        box-shadow: 4px 4px 0px 1px #1E1E1E;
+    }
+
+    .MR-teamInfo {
+        gap: 12px;
+    }
+
+    .MR-teamInfo h4 {
+        font-size: 24px;
+    }
+
+    .MR-teamImage {
+        width: 80px;
+        height: 80px;
+        border-radius: 10px;
+    }
+
+    .MR-teamIcon {
+        padding: 14px;
+        width: 48px;
+        height: 48px;
+    }
+
+    .MR-teamCardBody {
+        padding: 24px;
+        gap: 16px;
+    }
+
+    .MR-teamDegree {
+        font-size: 20px;
+    }
+
+    .MR-teamDesc {
+        font-size: 16px;
+    }
+}
+
+/* ---------- Responsive for screen <= 1439px (mobile view) ---------- */
+@media (max-width: 1439px) {
+    .MR-teamCard {
+        padding: 30px;
+    }
+
+    .MR-teamCardHeader,
+    .MR-teamInfo {
+        gap: 10px;
+    }
+
+    .MR-teamInfo h4 {
+        font-size: 19px;
+    }
+
+    .MR-teamCardBody {
+        padding: 20px;
+        gap: 12px;
+    }
+}
+
+/* ---------- Responsive for screen <= 992px (mobile view) ---------- */
+@media (max-width: 992px) {
+    .MR-teamCard {
+        width: 100%;
+    }
+
+    .MR-teamImage {
+        border-radius: 8px;
+        width: 60px;
+        height: 60px;
+    }
+}

@@ -1,0 +1,112 @@
+/* === SubHero Main Container === */
+.MR-subHeroContainer {
+    display: flex;
+    align-items: center;
+    background-color: var(--white-color);
+    padding: 150px 120px;
+    gap: 50px;
+    border: 1.5px solid var(--grey15);
+    border-radius: 12px;
+    box-shadow: 8px 8px 0px 1px #1E1E1E;
+    margin-top: 154px;
+    position: relative; 
+}
+
+/* === Shared width for left and right sides === */
+.MR-subHeroSideSize {
+    width: 50%;
+}
+
+/* === Specific styling for TitleComponent when flag="subhero" === */
+.flag-subhero {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    margin-top: 0;
+
+}
+
+/* Custom title style in subhero */
+.flag-subhero .Mr-Title {
+    text-align: start;
+    font-size: 48px;
+}
+
+/* === Decorative Shape (top-left corner image) === */
+.MR-subHeroDecorativeShape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+}
+
+/* === Responsive Design === */
+
+/* For screens <= 1919px */
+@media (max-width: 1919px) {
+    .MR-subHeroContainer {
+        padding: 100px 80px;
+        border-radius: 10px;
+        box-shadow: 6px 6px 0px 1px #1E1E1E;
+        margin-top: 120px;
+    }
+
+    .MR-subHeroDecorativeShape {
+        width: 137px;
+    }
+
+    .subHeroPargraph {
+        font-size: 16px;
+    }
+
+    .flag-subhero .Mr-Title {
+        font-size: 30px;
+    }
+}
+
+/* For screens <= 1439px */
+@media (max-width: 1439px) {
+    .MR-subHeroContainer {
+        padding: 80px 60px;
+        border-radius: 10px;
+        box-shadow: 6px 6px 0px 1px #1E1E1E;
+        margin-top: 100px;
+        gap: 24px;
+    }
+
+    .MR-subHeroDecorativeShape {
+        width: 120px;
+    }
+}
+
+/* For screens <= 992px (Tablet and Mobile view) */
+@media (max-width: 992px) {
+    .MR-subHeroContainer {
+        flex-direction: column; 
+        padding: 50px 30px;
+        margin-top: 100px;
+        gap: 20px;
+    }
+
+    .MR-subHeroSideSize {
+        width: 100%; 
+    }
+
+    .MR-subHeroDecorativeShape {
+        width: 100px;
+    }
+
+    .flag-subhero {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .flag-subhero .Mr-Title {
+        text-align: center;
+        font-size: 28px !important;
+    }
+
+    .subHeroPargraph {
+        text-align: center;
+    }
+}

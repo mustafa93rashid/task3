@@ -1,0 +1,90 @@
+/* Container for all testimonials and navigation buttons */
+.Mr-TestimonialsAllCard {
+  width: 100%;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Container for the testimonial cards */
+.Mr-sliderCard {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style for navigation buttons (Previous / Next) */
+.Mr-TestimonialsBtn {
+  background-color: var(--white-color);
+  padding: 14px;
+  border: 2px solid var(--grey20);
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Mr-TestimonialsBtn:hover {
+  background-color: var(--orange70); /* Green */
+  transition-duration: 0.4s ;
+  cursor: pointer;
+}
+
+
+/* Mobile navigation buttons (hidden by default) */
+.Mr-mobileButton {
+  display: none;
+}
+
+/* ---------- Responsive Styles ---------- */
+
+/* Screens smaller than 1919px */
+@media (max-width: 1919px) {
+  .Mr-TestimonialsAllCard {
+    gap: 40px; 
+  }
+  
+  .Mr-sliderCard {
+    gap: 40px;
+  }
+  
+  .Mr-TestimonialsBtn {
+    padding: 12px;
+    border-radius: 8px;
+  }
+}
+
+/* Screens smaller than 1439px */
+@media (max-width: 1439px) {
+  .Mr-TestimonialsAllCard {
+    gap: 24px; 
+  }
+  
+  .Mr-sliderCard {
+    gap: 50px; 
+  }
+  
+  .Mr-TestimonialsBtn {
+    padding: 10px;
+  }
+}
+
+/* Screens smaller than 992px (Tablet & Mobile) */
+@media (max-width: 992px) {
+  .Mr-sliderCard {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .Mr-mobileButton {
+    display: flex;
+    gap: 20px;
+  }
+
+  .Mr-wideScreenButton {
+    display: none;
+  }
+}

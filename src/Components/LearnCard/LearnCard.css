@@ -1,0 +1,144 @@
+/* Container for Learn Card with image, title, and paragraph */
+.MR-learnCardContainer {
+    width: 31.2449875%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    border: 1.5px solid var(--grey15);
+    padding: 50px;
+    box-shadow: 6px 6px 0px 2px #1E1E1E;
+    background-color: var(--white-color);
+    position: relative;
+
+
+    img {
+        /* Styling the image inside the card */
+        border: 1.5px solid var(--grey15);
+        border-radius: 12px;
+        object-fit: cover;
+        aspect-ratio: 4 / 3;
+        z-index: 99;
+    }
+
+    h3 {
+        /* Card title */
+        color: var(--grey10);
+        text-align: center;
+        padding-top: 50px;
+        z-index: 9;
+    }
+
+    p {
+        /* Card paragraph text */
+        color: var(--grey30);
+        text-align: center;
+    }
+
+    .MR-learnTitleAndPar {
+        /* Container for title and paragraph */
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        z-index: 9;
+    }
+}
+
+.MR-learnCardContainer:hover {
+    transform: translateY(-8px); 
+    box-shadow: 8px 8px 0px 2px #1E1E1E; 
+    border-color: var(--orange65); 
+}
+
+
+/* Decorative strip in the center top of the card */
+.MR-Strip {
+    width: 25.19%;
+    height: 68.18%;
+    background-color: var(--Orange95);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0 0 12px 12px;
+    border: 1.5px solid var(--grey15);
+    border-top: none;
+}
+
+/* Media query for screens <= 1919px */
+@media (max-width:1919px) {
+    .MR-learnCardContainer {
+        border-radius: 10px;
+        padding: 40px;
+        box-shadow: 4px 4px 0px 1px #1E1E1E;
+
+
+        img {
+            border-radius: 10px;
+        }
+
+        h3 {
+            font-size: 24px;
+            padding-top: 40px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        .MR-learnTitleAndPar {
+            gap: 14px;
+        }
+    }
+
+    .MR-Strip {
+        height: 70%;
+        border-radius: 0 0 10px 10px;
+    }
+}
+
+/* Media query for screens <= 1439px */
+@media (max-width:1439px) {
+    .MR-learnCardContainer {
+        padding: 30px;
+
+        img {
+            border-radius: 10px;
+        }
+
+        h3 {
+            padding-top: 30px;
+        }
+
+        .MR-learnTitleAndPar {
+            gap: 14px;
+        }
+    }
+
+    .MR-Strip {
+        height: 68%;
+        border-radius: 0 0 10px 10px;
+    }
+}
+
+/* Media query for screens <= 1250px */
+@media (max-width:1250px) {
+    .MR-Strip {
+        height: 59%;
+    }
+}
+
+/* Media query for screens <= 992px (mobile layout) */
+@media (max-width:992px) {
+    .MR-learnCardContainer {
+        width: 100%;
+
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+    }
+
+    .MR-Strip {
+        height: 65%;
+    }
+}

@@ -1,0 +1,27 @@
+/* === Container for all TeamCard components === */
+.team-cards{
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+/* === Responsive: Screens up to 1919px === */
+@media (max-width: 1919px) {
+    .team-cards{
+        gap: 40px;
+    }
+}
+
+/* === Responsive: Screens up to 1439px === */
+@media (max-width: 1439px) {
+    .team-cards{
+        gap: 24px;
+    }
+}
+
+/* === Responsive: Screens up to 992px === */
+@media (max-width: 992px) {
+    .team-cards{
+        flex-wrap: wrap;
+    }
+}

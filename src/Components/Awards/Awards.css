@@ -1,0 +1,83 @@
+/* === Container for all award cards displayed in a row === */
+.MR-allAwardsCardContainer {
+    display: flex;
+    gap: 40px;
+
+    span{
+        font-family: "Raleway", sans-serif;
+        font-weight: 700;
+    }
+}
+
+/* === Container for navigation buttons (e.g., previous/next) === */
+.MR-awardsButtonContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 50px;
+
+    /* === Inner container for the navigation buttons (left/right) === */
+    .buttonCon {
+        display: flex;
+        gap: 20px;
+
+    }
+
+    /* === Style for each navigation button === */
+    button {
+        border-radius: 8px;
+        border: 1.5px solid var(--grey20);
+        padding: 14px;
+        width: 58px;
+        height: 58px;
+        background-color: var(--white-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    button:hover {
+        background-color: var(--orange70); /* Green */
+        transition-duration: 0.4s ;
+        cursor: pointer;
+      }
+}
+
+/* ---------- Responsive for screen <= 1919px ---------- */
+@media (max-width:1919px) {
+    .MR-allAwardsCardContainer {
+        gap: 30px;
+
+        span{
+            font-size: 18px;
+        }
+    }
+
+    .MR-awardsButtonContainer {
+        padding-top: 40px;
+
+        .buttonCon {
+            gap: 16px;
+        }
+
+        button {
+            border-radius: 6px;
+            padding: 12px;
+            width: 48px;
+            height: 48px;
+        }
+    }
+}
+
+/* ---------- Responsive for screen <= 992px (mobile view) ---------- */
+@media (max-width:992px) {
+    .MR-awardsButtonContainer {
+        padding-top: 30px;
+
+
+        button {
+            border-radius: 6px;
+            padding: 12px;
+        }
+    }
+}

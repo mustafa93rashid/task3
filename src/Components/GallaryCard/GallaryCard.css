@@ -1,0 +1,154 @@
+/* Main container for the gallery card layout */
+.MR-galleryCardContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 200px 50px 50px 50px;
+    gap: 40px;
+    border-radius: 12px;
+    border: 2px solid var(--grey15);
+    box-shadow: 6px 6px 0px 2px #1E1E1E;
+    background-color: var(--white-color);
+    position: relative;
+}
+
+/* Heading inside the title and button container */
+.MR-galleryCardTitleButton h3 {
+    font-family: "Raleway", sans-serif;
+}
+
+/* Container for title and navigation buttons */
+.MR-galleryCardTitleButton {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Container for buttons (next/prev) */
+.MR-buttonContainer {
+    display: flex;
+    gap: 20px;
+
+    button {
+        gap: 10px;
+        border-radius: 8px;
+        border: 2px solid var(--grey15);
+        padding: 14px;
+        background-color: var(--white-color);
+    }
+
+    button:hover {
+        background-color: var(--orange70); /* Green */
+        transition-duration: 0.4s ;
+        cursor: pointer;
+      }
+}
+
+/* Image container positioned above the card, centered */
+.MR-galleryImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    position: absolute;
+    top: -30%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    img {
+        width: 40.5538847%;
+        aspect-ratio: 4/3;
+        object-fit: cover;
+        border-radius: 12px;
+        border: 2px solid var(--grey15);
+    }
+}
+
+/* -------- Responsive: Screens <= 1919px -------- */
+@media (max-width:1919px) {
+    .MR-galleryCardContainer {
+        padding: 180px 40px 40px 40px;
+        gap: 30px;
+        box-shadow: 4px 4px 0px 1px #1E1E1E;
+    }
+
+    .MR-galleryCardTitleButton h3 {
+        font-size: 34px;
+        font-family: "Raleway", sans-serif;
+    }
+
+    .MR-galleryCardTitleButton p {
+        font-size: 20px;
+    }
+
+    .MR-buttonContainer {
+        gap: 16px;
+
+        button {
+            gap: 16px;
+            border-radius: 6px;
+            padding: 12px;
+        }
+    }
+}
+
+/* -------- Responsive: Screens <= 1200px -------- */
+@media (max-width:1200px) {
+    .MR-galleryImage {
+        gap: 25px;
+        top: -20%;
+
+        img {
+            width: 42.5538847%;
+        }
+    }
+}
+
+/* -------- Responsive: Screens <= 992px (Tablet/Mobile) -------- */
+@media (max-width:992px) {
+    .MR-galleryCardContainer {
+        padding: 120px 30px 30px 30px; 
+        gap: 20px; 
+        box-shadow: 4px 4px 0px 1px #1E1E1E;
+    }
+
+    .MR-galleryImage {
+        width: 83%;
+        top: -29%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        img {
+            width: 100%;
+            height: 203px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 2px solid var(--grey15);
+        }
+    }
+
+    .MR-galleryCardTitleButton h3 {
+        font-size: 28px;
+    }
+
+    .MR-galleryCardTitleButton p {
+        font-size: 18px;
+    }
+
+    .MR-galleryCardTitleButton {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .MR-buttonContainer button {
+        gap: 16px;
+        border-radius: 6px;
+        padding: 12px;
+    }
+
+    /* Paragraph in mobile centered alignment */
+    .MR-galleryPargraph {
+        text-align: center;
+    }
+}
