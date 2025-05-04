@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router";
 import "./App.css";
 import Cursor from "./Components/Cursor/Cursor";
 import Footer from "./Components/Footer/Footer";
-// import HandleLoadingComponent from "./Components/HandleLoadingComponent/HandleLoadingComponent";
+import HandleLoadingComponent from "./Components/HandleLoadingComponent/HandleLoadingComponent";
 import NavBar1 from "./Components/NavBar1/NavBar1";
 import NavBar2 from "./Components/NavBar2/NavBar2";
 import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
@@ -22,7 +22,7 @@ function App() {
   }, []);
   return (
     <div className="bg-main">
-      {/* <HandleLoadingComponent /> */}
+      <HandleLoadingComponent />
       <ScrollToTop />
       <Cursor />
       <NavBar1 />
