@@ -25,11 +25,11 @@ const GallaryCard = ({ title, desc, images }) => {
         <div className="MR-buttonContainer">
           {/* Button to go to previous slide */}
           <button onClick={prev}>
-            <img src="task3/images/OurRoomsGallery/left.svg" alt="prev" />
+            <img src="/task3/images/OurRoomsGallery/left.svg" alt="prev" />
           </button>
           {/* Button to go to next slide */}
           <button onClick={next}>
-            <img src="task3/images/OurRoomsGallery/right.svg" alt="next" />
+            <img src="/task3/images/OurRoomsGallery/right.svg" alt="next" />
           </button>
         </div>
       </div>
