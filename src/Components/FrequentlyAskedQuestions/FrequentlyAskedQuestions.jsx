@@ -2,6 +2,8 @@ import FreAcc from "../FreAcc/FreAcc";
 import TitleComponent from "../TitleComponent/TitleComponent";
 import "./FrequentlyAskedQuestions.css";
 import { FaqData } from "../../Data/FaqData";
+import { SectionHeaders } from "../../Data/SectionHeadersData";
+
 
 const FrequentlyAskedQuestions = () => {
   // Split the FAQ data into two parts: left and right sides
@@ -11,13 +13,11 @@ const FrequentlyAskedQuestions = () => {
   return (
     <div className="px-162">
       {/* Section title and description */}
-
       <TitleComponent
-        btnContnet="Solutions For The Doubts"
-        title="Frequently Asked Questions"
-        descrption="Find all the essential information you need in our FAQ section, designed to address the most frequently asked questions and help you make informed decisions for your child's education."
-      />
-
+  btnContnet={SectionHeaders.faq.btnContent}
+  title={SectionHeaders.faq.title}
+  descrption={SectionHeaders.faq.description}
+/>
       {/* Container holding two columns of FAQ items */}
       <div className="Mr-FaqContainer">
         {/* Left side FAQs */}

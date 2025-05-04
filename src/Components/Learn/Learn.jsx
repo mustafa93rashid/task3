@@ -2,21 +2,21 @@ import LearnCard from "../LearnCard/LearnCard";
 import TitleComponent from "../TitleComponent/TitleComponent";
 import "./Learn.css";
 import { WhatsLearnData } from "../../Data/WhatsLearnData";
+import { SectionHeaders } from "../../Data/SectionHeadersData";
 
 const Learn = () => {
   return (
     <div className="px-162">
       {/* Section Title and Description */}
       <TitleComponent
-        btnContnet="Our Features"
-        title="What Students Learn"
-        descrption="At Little Learners Academy, we strive to cultivate a love for learning and equip children with essential skills for their future success. Our academic programs cover a wide range of subjects, allowing students to develop a strong foundation and discover their interests. Some key areas of learning include"
+        btnContnet={SectionHeaders.learn.btnContent}
+        title={SectionHeaders.learn.title}
+        descrption={SectionHeaders.learn.description}
       />
 
       {/* Container for all LearnCard components */}
       <div className="MR-allLearnCardContainer">
         {WhatsLearnData.map((data, index) => (
-          
           // Rendering each LearnCard with data from WhatsLearnData
           <LearnCard
             key={index}

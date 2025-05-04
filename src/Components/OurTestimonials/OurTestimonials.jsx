@@ -3,6 +3,8 @@ import TitleComponent from "../TitleComponent/TitleComponent";
 import { TestimonialsData } from "../../Data/TestimonialsData";
 import "./OurTestimonials.css";
 import Slider from "../Slider/slider";
+import { SectionHeaders } from "../../Data/SectionHeadersData";
+
 
 
 const OurTestimonials = () => {
@@ -11,11 +13,11 @@ const OurTestimonials = () => {
 
   return (
     <div className="px-162">
-      <TitleComponent
-        btnContnet="Their Happy Words 🤗"
-        title="Our Testimonials"
-        descrption="Our testimonials are heartfelt reflections of the nurturing environment we provide, where children flourish both academically and emotionally."
-      />
+<TitleComponent
+  btnContnet={SectionHeaders.testimonials.btnContent}
+  title={SectionHeaders.testimonials.title}
+  descrption={SectionHeaders.testimonials.description}
+/>
 
       <div className="Mr-TestimonialsAllCard">
         <div className="Mr-wideScreenButton">

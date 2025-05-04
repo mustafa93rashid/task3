@@ -1,145 +1,151 @@
+/* Main container for a single timeline detail row */
 .MR-historyDetails {
-    display: flex;
-    gap: 50px;
+  display: flex;
+  gap: 50px;
+}
+
+/* Right section containing the horizontal connector and year box */
+.MR-historyDetailsRightSection {
+  display: flex;
+  align-items: center;
+}
+
+/* Horizontal line between the vertical connector and year box */
+.MR-horizontalConnector {
+  width: 55px;
+  background-color: var(--grey10);
+  height: 2px;
+  outline: 5px solid var(--Orange80);
+  position: relative;
+  z-index: 100;
+}
+
+.MR-horizontalConnector::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -20%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: var(--white-color);
+  border-radius: 50%;
+  border: 2px solid var(--grey15);
+}
+
+.MR-horizontalConnector::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -20%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: var(--white-color);
+  border-radius: 50%;
+  border: 2px solid var(--grey15);
+}
+
+/* Box that displays the year with background and shadow */
+.MR-historyDetails-yearBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white-color);
+  border: 2px solid var(--grey15);
+  border-radius: 12px;
+  box-shadow: 4px 4px 0px 1px #1E1E1E;
+  padding: 30px 50px;
+  gap: 20px;
+  position: relative;
+  width: fit-content;
+  height: 148px;
+
+  h3 {
+    font-family: "Raleway", sans-serif;
+  }
+}
+
+/* Left section with title and description */
+.MR-historyDetailsLeftSection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  h3 {
+    font-family: "Raleway", sans-serif;
+  }
+}
+
+/* Responsive: screens up to 1919px */
+@media (max-width:1919px) {
+  .MR-historyDetails {
+    gap: 40px;
   }
 
-  .MR-historyDetailsRightSection{
-    display: flex;
-    align-items: center;
-  }
-
-  .MR-horizontalConnector{
-    width: 55px;
-    background-color: var(--grey10);
-    height: 2px;
-    outline: 5px solid var(--Orange80);
-    position: relative;
-    z-index: 100;
-  }
-
-  .MR-horizontalConnector::before{
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: -20%;
-    transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
-    background-color: var(--white-color);
-    border-radius: 50%;
-    border: 2px solid var(--grey15);
-  }
-
-  .MR-horizontalConnector::after{
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: -20%;
-    transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
-    background-color: var(--white-color);
-    border-radius: 50%;
-    border: 2px solid var(--grey15);
-  }
-  
   .MR-historyDetails-yearBox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--white-color);
-    border: 2px solid var(--grey15);
-    border-radius: 12px;
-    box-shadow: 4px 4px 0px 1px #1E1E1E;
-    padding: 30px 50px;
-    gap: 20px;
-    position: relative;
-    width: fit-content;
-    height: 148px;
+    border-radius: 10px;
+    padding: 24px 34px;
+    height: 110px;
+
+    img {
+      width: 60px;
+    }
 
     h3 {
-      font-family: "Raleway", sans-serif;
+      font-size: 48px;
     }
   }
 
   .MR-historyDetailsLeftSection {
+    gap: 15px;
+
+    h3 {
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+}
+
+/* Responsive: screens up to 992px */
+@media (max-width:992px) {
+  .MR-historyDetails {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
+  }
 
-    h3{
-      font-family: "Raleway", sans-serif;
+  .MR-horizontalConnector {
+    width: 45px;
+    outline: 4px solid var(--Orange80);
+  }
+
+  .MR-historyDetails-yearBox {
+    padding: 20px 24px;
+    height: 90px;
+
+    img {
+      width: 50px;
+    }
+
+    h3 {
+      font-size: 38px;
     }
   }
 
+  .MR-historyDetailsLeftSection {
+    gap: 12px;
+    padding-left: 44px;
 
-  @media (max-width:1919px) {
-    .MR-historyDetails {
-      gap: 40px;
+    h3 {
+      font-size: 22px;
     }
 
-    .MR-historyDetails-yearBox {
-      border-radius: 10px;
-      padding: 24px 34px;
-      height: 110px;
-
-      img{
-        width: 60px;
-      }
-
-      h3{
-        font-size: 48px;
-      }
-    }  
-
-    .MR-historyDetailsLeftSection {
-      gap: 15px;
-  
-      h3{
-        font-size: 24px;
-      }
-
-      p{
-        font-size: 16px;
-      }
+    p {
+      font-size: 16px;
     }
   }
-
-  @media (max-width:992px) {
-    .MR-historyDetails {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-    }
-
-    .MR-horizontalConnector{
-      width: 45px;
-      outline: 4px solid var(--Orange80);
-    }
-
-    .MR-historyDetails-yearBox {
-      padding: 20px 24px;
-      height: 90px;
-
-      img{
-        width: 50px;
-      }
-
-      h3{
-        font-size: 38px;
-      }
-    }
-
-    .MR-historyDetailsLeftSection {
-      gap: 12px;
-      padding-left: 44px;
-  
-      h3{
-        font-size: 22px;
-      }
-
-      p{
-        font-size: 16px;
-      }
-    }
-  }
+}

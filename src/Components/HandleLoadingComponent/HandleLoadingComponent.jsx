@@ -15,7 +15,7 @@ export default function HandleLoadingComponent() {
         });
         AOS.refresh();
         setLoading(false);
-      }, 3000);
+      }, 2700);
     };
 
     if (document.readyState === "complete") {

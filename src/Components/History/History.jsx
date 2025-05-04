@@ -2,17 +2,19 @@ import HistoryDeatils from "../HistoryDeatils/HistoryDeatils";
 import TitleComponent from "../TitleComponent/TitleComponent";
 import "./History.css";
 import { HistoryData } from "../../Data/HistoryData";
+import { SectionHeaders } from "../../Data/SectionHeadersData";
 
 const History = () => {
   return (
     <div className="px-162">
-      {/* Section Title */}
+      {/* Section Title: Button text, title, and description taken from data file */}
       <TitleComponent
-        btnContnet="Our Progressive Journey"
-        title="Our History"
-        descrption="Founded with a passion for early education in 2005, our kindergarten school boasts a rich history of empowering young learners to reach their potential through innovative teaching methods and a supportive learning environment"
+        btnContnet={SectionHeaders.history.btnContent}
+        title={SectionHeaders.history.title}
+        descrption={SectionHeaders.history.description}
       />
-
+      
+      {/* List of timeline entries rendered using the HistoryDetails component */}
       <div className="MR-historyContainer">
         <div className="MR-historyContentBox">
           <div className="MR-verticalConnector"></div>

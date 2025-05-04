@@ -1,24 +1,25 @@
-import TitleComponent from "../TitleComponent/TitleComponent"
-import "./Mission.css"
+import TitleComponent from "../TitleComponent/TitleComponent";
+import "./Mission.css";
 import { MissionData } from "../../Data/MissionData";
 import MissionCard from "../MissionCard/MissionCard";
+import { SectionHeaders } from "../../Data/SectionHeadersData";
+
 
 const Mission = () => {
   return (
     // === Main wrapper with horizontal padding ===
     <div className="px-162">
-
       {/* === Section Title === */}
       <TitleComponent
-        btnContnet="Mission & Visions"
-        title="Our Mission & Visions"
-        descrption="We are here to provide a nurturing and inclusive environment where young minds can thrive, fostering a love for learning and personal growth."
+        btnContnet={SectionHeaders.mission.btnContent}
+        title={SectionHeaders.mission.title}
+        descrption={SectionHeaders.mission.description}
       />
 
       {/* === Container for all mission cards === */}
       <div className="MR-allMissionCardContainer">
         {MissionData.map((data, index) => (
-          <MissionCard 
+          <MissionCard
             key={index}
             title={data.title}
             icon={data.icon}
@@ -26,9 +27,8 @@ const Mission = () => {
           />
         ))}
       </div>
-      
     </div>
-  )
-}
+  );
+};
 
-export default Mission
+export default Mission;

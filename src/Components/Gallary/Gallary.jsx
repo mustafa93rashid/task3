@@ -3,11 +3,19 @@ import { GalleryData } from "../../Data/GalleryData";
 import GallaryCard from "../GallaryCard/GallaryCard";
 import TitleComponent from "../TitleComponent/TitleComponent";
 import { GalleryTabData } from "../../Data/GalleryData";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { SectionHeaders } from "../../Data/SectionHeadersData";
 
 const Gallary = () => {
-  // State to keep track of the active tab
-  const [activeTab, setActiveTab] = useState("All");
+  // Load the last active tab from localStorage or default to "All"
+  const [activeTab, setActiveTab] = useState(() => {
+    return localStorage.getItem("activeGalleryTab") || "All";
+  });
+
+  // Save the current active tab to localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem("activeGalleryTab", activeTab);
+  }, [activeTab]);
 
   // Filter gallery data based on the selected tab
   const filteredGallery =
@@ -17,15 +25,15 @@ const Gallary = () => {
 
   return (
     <div className="px-162">
-      {/* Section title with button, heading and description */}
+      {/* Section title */}
       <TitleComponent
-        btnContnet="Our Gallery"
-        title="Our Rooms Gallery"
-        descrption="Step into our Gallery and immerse yourself in a visual journey of cherished moments and unforgettable experiences at our kindergarten school."
+        btnContnet={SectionHeaders.gallery.btnContent}
+        title={SectionHeaders.gallery.title}
+        descrption={SectionHeaders.gallery.description}
       />
 
       <div className="MR-allGalleryCard">
-        {/* Tabs to filter gallery items */}
+        {/* Tabs */}
         <div className="MR-galleryTabsContainer">
           {GalleryTabData.map((tab, index) => (
             <button
@@ -40,7 +48,7 @@ const Gallary = () => {
           ))}
         </div>
 
-        {/* Render a GallaryCard for each filtered gallery item */}
+        {/* Cards */}
         {filteredGallery.map((data, index) => (
           <GallaryCard
             key={index}
