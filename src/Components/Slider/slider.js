@@ -65,4 +65,4 @@ const Slider = (
   return { currentIndex, cardsPerSlide, getVisibleItems, next, prev };
 };
 
-export default useSlider;
+export default Slider;
